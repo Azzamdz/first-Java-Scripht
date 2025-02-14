@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angry Text Converter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img  src="image/logo.png" alt="Angry cloud with lightning bolts" class="angry-cloud"/>
+            <div>
+                <h1 class="title">ANGRY TEXT CONVERTER</h1>
+                <p class="description">Tidak semua orang tega menulis dengan huruf kapital. Meski tombol Caps Lock dan Shift tersedia, ada kalanya kita ingin menyampaikan amarah tanpa benar-benar menekan tombol tersebut dengan penuh emosi.</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="input-section">
+                <label class="label" for="inputText">Masukkan teks di sini:</label>
+                <textarea class="input-textarea" id="inputText" placeholder="Aku sebenarnya tidak marah...."></textarea>
+            </div>
+            <div class="output-section">
+                <label class="label" for="outputText">Hasil:</label>
+                <div class="output-text" id="outputText">
+                    AKU SEBENARNYA TIDAK MARAH....!!! 😡🔥
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <button class="angry-button" id="buttonAngry">Make it angry</button>
+            <div class="whatsapp-section">
+                <label for="whatsappNumber">Kirim ke whatsapp:</label>
+                <input class="whatsapp-input" id="whatsappNumber" placeholder="08123456789" type="text"/>
+                <button class="whatsapp-button">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function makeItAngry() {
+            let userInput = document.getElementById("inputText").value
+            let textBesar = userInput.toUpperCase()
+            console.log(textBesar)
+
+            document.getElementById("outputText").innerText = textBesar
+
+
+        }
+
+        let buttonAngry = document.getElementById("buttonAngry")
+        buttonAngry.addEventListener("click", makeItAngry )
+
+
+    </script>
+   
+</body>
+</html>
