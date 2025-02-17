@@ -147,7 +147,7 @@ body {
     background-color: #2f855a;
 }
 
-/* MOBILE RESPONSIVE */
+
 @media (max-width: 600px) {
     body {
         padding: 8px;
